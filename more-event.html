@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Event</title>
+</head>
+<body>
+    <p id="para">Default Text</p>
+    <textarea name="" id="input-field" cols="30" rows="10"></textarea>
+
+    <script>
+        document.getElementById('input-field').addEventListener("keyup", function(){
+            const text = document.getElementById('input-field')
+            const textValue = text.value
+            const p = document.getElementById("para")
+            p.innerText = textValue
+        })
+
+    </script>
+</body>
+</html>
