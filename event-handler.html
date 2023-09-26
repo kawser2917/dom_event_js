@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading">Babu Aita heading One</h1>
+    <button onclick="messageToHeading()" >Clink To see Some Message</button>
+    <button id="message-change">Another Message</button> <br><br>
+
+    <p id="display-input-text">Default Value</p>
+
+    <input type="text" name="" id="input-field">
+    <button id="update-btn">Update</button>
+  
+
+    <script>
+        function messageToHeading(){
+            const heading = document.getElementById('heading')
+            heading.innerText = "Work So much hard so that everyone get shocked"
+        }
+        document.getElementById('message-change').addEventListener('click',function(){
+            const HeadingFromHtml = document.getElementById('heading')
+
+        HeadingFromHtml.innerText = "Forgive everyone And go ahead so that everyone comes to you to say sorry"
+        })
+
+        document.getElementById("update-btn").addEventListener('click',function(){
+            const inputField = document.getElementById('input-field')
+            const inputValue = inputField.value
+
+            const p = document.getElementById("display-input-text")
+            p.innerText = inputValue
+            inputField.value = ''
+
+        })
+    </script>
+</body>
+</html>
